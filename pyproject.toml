@@ -32,7 +32,7 @@ Issues = "https://github.com/ntua-unit-of-control-and-informatics/jaqpot-api-cli
 Source = "https://github.com/ntua-unit-of-control-and-informatics/jaqpot-api-client-python"
 
 [tool.hatch.version]
-path = "src/jaqpot_api_client/__init__.py"
+path = "src/jaqpot_api_client/__about__.py"
 
 [tool.hatch.envs.types]
 extra-dependencies = [
@@ -46,7 +46,7 @@ source_pkgs = ["jaqpot_api_client", "tests"]
 branch = true
 parallel = true
 omit = [
-  "src/jaqpot_api_client/__init__.py",
+  "src/jaqpot_api_client/__about__.py",
 ]
 
 [tool.coverage.paths]

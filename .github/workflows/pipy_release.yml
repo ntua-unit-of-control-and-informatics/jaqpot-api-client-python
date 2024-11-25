@@ -22,7 +22,7 @@ jobs:
         run: echo ::set-output name=TAG_NAME::$(echo $GITHUB_REF | cut -d / -f 3)
       - name: Update version
         run: |
-          sed -i "s/{{VERSION_PLACEHOLDER}}/${{ steps.tag.outputs.TAG_NAME }}/g" src/__init__.py
+          sed -i "s/{{VERSION_PLACEHOLDER}}/${{ steps.tag.outputs.TAG_NAME }}/g" src/jaqpot_api_client/__about__.py
       - name: Build a binary wheel
         run: >-
           hatch build
