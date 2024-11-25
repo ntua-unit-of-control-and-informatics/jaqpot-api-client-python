@@ -17,7 +17,7 @@ openapi-generator-cli generate \
     -i https://raw.githubusercontent.com/ntua-unit-of-control-and-informatics/jaqpot-api/refs/heads/main/src/main/resources/openapi.yaml \
     -g python \
     -o $TEMP_DIR \
-    --additional-properties packageName=src.api.openapi
+    --additional-properties packageName=src.jaqpot_api_client
 
 # Ensure the target directory exists
 mkdir -p $TARGET_DIR

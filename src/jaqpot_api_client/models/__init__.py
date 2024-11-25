@@ -1,7 +1,6 @@
 # coding: utf-8
 
 # flake8: noqa
-
 """
     Jaqpot API
 
@@ -15,31 +14,7 @@
 """  # noqa: E501
 
 
-__version__ = "1.0.0"
-
-# import apis into sdk package
-from src.jaqpot_api_client.api.user_settings_api import UserSettingsApi
-from src.jaqpot_api_client.api.api_keys_api import ApiKeysApi
-from src.jaqpot_api_client.api.auth_api import AuthApi
-from src.jaqpot_api_client.api.dataset_api import DatasetApi
-from src.jaqpot_api_client.api.feature_api import FeatureApi
-from src.jaqpot_api_client.api.lead_api import LeadApi
-from src.jaqpot_api_client.api.model_api import ModelApi
-from src.jaqpot_api_client.api.organization_api import OrganizationApi
-from src.jaqpot_api_client.api.organization_invitation_api import OrganizationInvitationApi
-
-# import ApiClient
-from src.jaqpot_api_client.api_response import ApiResponse
-from src.jaqpot_api_client.api_client import ApiClient
-from src.jaqpot_api_client.configuration import Configuration
-from src.jaqpot_api_client.exceptions import OpenApiException
-from src.jaqpot_api_client.exceptions import ApiTypeError
-from src.jaqpot_api_client.exceptions import ApiValueError
-from src.jaqpot_api_client.exceptions import ApiKeyError
-from src.jaqpot_api_client.exceptions import ApiAttributeError
-from src.jaqpot_api_client.exceptions import ApiException
-
-# import models into sdk package
+# import models into model package
 from src.jaqpot_api_client.models.api_key import ApiKey
 from src.jaqpot_api_client.models.binary_classification_scores import BinaryClassificationScores
 from src.jaqpot_api_client.models.bounding_box_doa import BoundingBoxDoa
