@@ -3,7 +3,7 @@
 [![PyPI - Version](https://img.shields.io/pypi/v/jaqpot-api-client.svg)](https://pypi.org/project/jaqpot-api-client)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/jaqpot-api-client.svg)](https://pypi.org/project/jaqpot-api-client)
 
------
+Contains an openapi generated client for the Jaqpot API in python
 
 ## Table of Contents
 
