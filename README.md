@@ -1,0 +1,1 @@
+# jaqpot-api-client-python
