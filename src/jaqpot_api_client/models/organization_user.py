@@ -32,8 +32,9 @@ class OrganizationUser(BaseModel):
     user_id: StrictStr = Field(alias="userId")
     username: Optional[StrictStr] = None
     email: Optional[StrictStr] = None
+    avatar_url: Optional[StrictStr] = Field(default=None, alias="avatarUrl")
     association_type: OrganizationUserAssociationType = Field(alias="associationType")
-    __properties: ClassVar[List[str]] = ["id", "userId", "username", "email", "associationType"]
+    __properties: ClassVar[List[str]] = ["id", "userId", "username", "email", "avatarUrl", "associationType"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -90,6 +91,7 @@ class OrganizationUser(BaseModel):
             "userId": obj.get("userId"),
             "username": obj.get("username"),
             "email": obj.get("email"),
+            "avatarUrl": obj.get("avatarUrl"),
             "associationType": obj.get("associationType")
         })
         return _obj

@@ -18,18 +18,17 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt
-from typing import Any, ClassVar, Dict, List, Optional, Union
-from typing_extensions import Annotated
+from pydantic import BaseModel, ConfigDict, StrictInt
+from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class MeanVarDoa(BaseModel):
+class UnarchiveModel200Response(BaseModel):
     """
-    MeanVarDoa
+    UnarchiveModel200Response
     """ # noqa: E501
-    bounds: Optional[Annotated[List[Annotated[List[Union[StrictFloat, StrictInt]], Field(max_length=1000)]], Field(max_length=1000)]] = None
-    __properties: ClassVar[List[str]] = ["bounds"]
+    id: Optional[StrictInt] = None
+    __properties: ClassVar[List[str]] = ["id"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -49,7 +48,7 @@ class MeanVarDoa(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of MeanVarDoa from a JSON string"""
+        """Create an instance of UnarchiveModel200Response from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -74,7 +73,7 @@ class MeanVarDoa(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of MeanVarDoa from a dict"""
+        """Create an instance of UnarchiveModel200Response from a dict"""
         if obj is None:
             return None
 
@@ -82,7 +81,7 @@ class MeanVarDoa(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "bounds": obj.get("bounds")
+            "id": obj.get("id")
         })
         return _obj
 

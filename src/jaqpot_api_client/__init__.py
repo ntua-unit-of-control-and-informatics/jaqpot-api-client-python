@@ -27,6 +27,8 @@ from src.jaqpot_api_client.api.lead_api import LeadApi
 from src.jaqpot_api_client.api.model_api import ModelApi
 from src.jaqpot_api_client.api.organization_api import OrganizationApi
 from src.jaqpot_api_client.api.organization_invitation_api import OrganizationInvitationApi
+from src.jaqpot_api_client.api.user_api import UserApi
+from src.jaqpot_api_client.api.user_settings_api import UserSettingsApi
 
 # import ApiClient
 from src.jaqpot_api_client.api_response import ApiResponse
@@ -41,6 +43,7 @@ from src.jaqpot_api_client.exceptions import ApiException
 
 # import models into sdk package
 from src.jaqpot_api_client.models.api_key import ApiKey
+from src.jaqpot_api_client.models.archive_model200_response import ArchiveModel200Response
 from src.jaqpot_api_client.models.binary_classification_scores import BinaryClassificationScores
 from src.jaqpot_api_client.models.bounding_box_doa import BoundingBoxDoa
 from src.jaqpot_api_client.models.city_block_doa import CityBlockDoa
@@ -89,6 +92,7 @@ from src.jaqpot_api_client.models.r_pbpk_config import RPbpkConfig
 from src.jaqpot_api_client.models.regression_scores import RegressionScores
 from src.jaqpot_api_client.models.scores import Scores
 from src.jaqpot_api_client.models.transformer import Transformer
+from src.jaqpot_api_client.models.unarchive_model200_response import UnarchiveModel200Response
 from src.jaqpot_api_client.models.update_api_key200_response import UpdateApiKey200Response
 from src.jaqpot_api_client.models.update_api_key_request import UpdateApiKeyRequest
 from src.jaqpot_api_client.models.user import User

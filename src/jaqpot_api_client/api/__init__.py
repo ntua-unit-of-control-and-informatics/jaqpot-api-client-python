@@ -10,4 +10,6 @@ from src.jaqpot_api_client.api.lead_api import LeadApi
 from src.jaqpot_api_client.api.model_api import ModelApi
 from src.jaqpot_api_client.api.organization_api import OrganizationApi
 from src.jaqpot_api_client.api.organization_invitation_api import OrganizationInvitationApi
+from src.jaqpot_api_client.api.user_api import UserApi
+from src.jaqpot_api_client.api.user_settings_api import UserSettingsApi
 
