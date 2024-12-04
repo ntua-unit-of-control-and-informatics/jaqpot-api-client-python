@@ -18,9 +18,9 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 
-from src.jaqpot_api_client.api_client import ApiClient, RequestSerialized
-from src.jaqpot_api_client.api_response import ApiResponse
-from src.jaqpot_api_client.rest import RESTResponseType
+from jaqpot_api_client.api_client import ApiClient, RequestSerialized
+from jaqpot_api_client.api_response import ApiResponse
+from jaqpot_api_client.rest import RESTResponseType
 
 
 class AuthApi:

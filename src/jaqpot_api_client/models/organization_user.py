@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from src.jaqpot_api_client.models.organization_user_association_type import OrganizationUserAssociationType
+from jaqpot_api_client.models.organization_user_association_type import OrganizationUserAssociationType
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -19,12 +19,12 @@ from typing_extensions import Annotated
 
 from pydantic import Field, StrictInt
 from typing_extensions import Annotated
-from src.jaqpot_api_client.models.feature import Feature
-from src.jaqpot_api_client.models.partially_update_model_feature_request import PartiallyUpdateModelFeatureRequest
+from jaqpot_api_client.models.feature import Feature
+from jaqpot_api_client.models.partially_update_model_feature_request import PartiallyUpdateModelFeatureRequest
 
-from src.jaqpot_api_client.api_client import ApiClient, RequestSerialized
-from src.jaqpot_api_client.api_response import ApiResponse
-from src.jaqpot_api_client.rest import RESTResponseType
+from jaqpot_api_client.api_client import ApiClient, RequestSerialized
+from jaqpot_api_client.api_response import ApiResponse
+from jaqpot_api_client.rest import RESTResponseType
 
 
 class FeatureApi:

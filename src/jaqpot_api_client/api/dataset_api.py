@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import List, Optional
 from typing_extensions import Annotated
-from src.jaqpot_api_client.models.dataset import Dataset
-from src.jaqpot_api_client.models.get_datasets200_response import GetDatasets200Response
+from jaqpot_api_client.models.dataset import Dataset
+from jaqpot_api_client.models.get_datasets200_response import GetDatasets200Response
 
-from src.jaqpot_api_client.api_client import ApiClient, RequestSerialized
-from src.jaqpot_api_client.api_response import ApiResponse
-from src.jaqpot_api_client.rest import RESTResponseType
+from jaqpot_api_client.api_client import ApiClient, RequestSerialized
+from jaqpot_api_client.api_response import ApiResponse
+from jaqpot_api_client.rest import RESTResponseType
 
 
 class DatasetApi:

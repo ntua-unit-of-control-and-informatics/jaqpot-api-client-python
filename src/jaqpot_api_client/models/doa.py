@@ -21,7 +21,7 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
-from src.jaqpot_api_client.models.doa_method import DoaMethod
+from jaqpot_api_client.models.doa_method import DoaMethod
 from typing import Optional, Set
 from typing_extensions import Self
 

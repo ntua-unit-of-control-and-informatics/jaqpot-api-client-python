@@ -20,12 +20,12 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import List
 from typing_extensions import Annotated
-from src.jaqpot_api_client.models.create_invitations_request import CreateInvitationsRequest
-from src.jaqpot_api_client.models.organization_invitation import OrganizationInvitation
+from jaqpot_api_client.models.create_invitations_request import CreateInvitationsRequest
+from jaqpot_api_client.models.organization_invitation import OrganizationInvitation
 
-from src.jaqpot_api_client.api_client import ApiClient, RequestSerialized
-from src.jaqpot_api_client.api_response import ApiResponse
-from src.jaqpot_api_client.rest import RESTResponseType
+from jaqpot_api_client.api_client import ApiClient, RequestSerialized
+from jaqpot_api_client.api_response import ApiResponse
+from jaqpot_api_client.rest import RESTResponseType
 
 
 class OrganizationInvitationApi:

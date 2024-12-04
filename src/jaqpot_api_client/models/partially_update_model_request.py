@@ -21,8 +21,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from src.jaqpot_api_client.models.model_task import ModelTask
-from src.jaqpot_api_client.models.model_visibility import ModelVisibility
+from jaqpot_api_client.models.model_task import ModelTask
+from jaqpot_api_client.models.model_visibility import ModelVisibility
 from typing import Optional, Set
 from typing_extensions import Self
 

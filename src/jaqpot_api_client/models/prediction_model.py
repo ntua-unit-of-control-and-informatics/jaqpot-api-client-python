@@ -20,11 +20,11 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from src.jaqpot_api_client.models.feature import Feature
-from src.jaqpot_api_client.models.model_task import ModelTask
-from src.jaqpot_api_client.models.model_type import ModelType
-from src.jaqpot_api_client.models.prediction_doa import PredictionDoa
-from src.jaqpot_api_client.models.transformer import Transformer
+from jaqpot_api_client.models.feature import Feature
+from jaqpot_api_client.models.model_task import ModelTask
+from jaqpot_api_client.models.model_type import ModelType
+from jaqpot_api_client.models.prediction_doa import PredictionDoa
+from jaqpot_api_client.models.transformer import Transformer
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -20,9 +20,9 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from src.jaqpot_api_client.models.binary_classification_scores import BinaryClassificationScores
-from src.jaqpot_api_client.models.multiclass_classification_scores import MulticlassClassificationScores
-from src.jaqpot_api_client.models.regression_scores import RegressionScores
+from jaqpot_api_client.models.binary_classification_scores import BinaryClassificationScores
+from jaqpot_api_client.models.multiclass_classification_scores import MulticlassClassificationScores
+from jaqpot_api_client.models.regression_scores import RegressionScores
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -22,9 +22,9 @@ from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from src.jaqpot_api_client.models.organization_user import OrganizationUser
-from src.jaqpot_api_client.models.organization_visibility import OrganizationVisibility
-from src.jaqpot_api_client.models.user import User
+from jaqpot_api_client.models.organization_user import OrganizationUser
+from jaqpot_api_client.models.organization_visibility import OrganizationVisibility
+from jaqpot_api_client.models.user import User
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -20,15 +20,15 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr
 from typing import List
 from typing_extensions import Annotated
-from src.jaqpot_api_client.models.api_key import ApiKey
-from src.jaqpot_api_client.models.create_api_key201_response import CreateApiKey201Response
-from src.jaqpot_api_client.models.get_all_api_keys_for_user200_response_inner import GetAllApiKeysForUser200ResponseInner
-from src.jaqpot_api_client.models.update_api_key200_response import UpdateApiKey200Response
-from src.jaqpot_api_client.models.update_api_key_request import UpdateApiKeyRequest
+from jaqpot_api_client.models.api_key import ApiKey
+from jaqpot_api_client.models.create_api_key201_response import CreateApiKey201Response
+from jaqpot_api_client.models.get_all_api_keys_for_user200_response_inner import GetAllApiKeysForUser200ResponseInner
+from jaqpot_api_client.models.update_api_key200_response import UpdateApiKey200Response
+from jaqpot_api_client.models.update_api_key_request import UpdateApiKeyRequest
 
-from src.jaqpot_api_client.api_client import ApiClient, RequestSerialized
-from src.jaqpot_api_client.api_response import ApiResponse
-from src.jaqpot_api_client.rest import RESTResponseType
+from jaqpot_api_client.api_client import ApiClient, RequestSerialized
+from jaqpot_api_client.api_response import ApiResponse
+from jaqpot_api_client.rest import RESTResponseType
 
 
 class ApiKeysApi:

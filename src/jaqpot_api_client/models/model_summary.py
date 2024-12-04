@@ -22,10 +22,10 @@ from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from src.jaqpot_api_client.models.model_type import ModelType
-from src.jaqpot_api_client.models.model_visibility import ModelVisibility
-from src.jaqpot_api_client.models.organization_summary import OrganizationSummary
-from src.jaqpot_api_client.models.user import User
+from jaqpot_api_client.models.model_type import ModelType
+from jaqpot_api_client.models.model_visibility import ModelVisibility
+from jaqpot_api_client.models.organization_summary import OrganizationSummary
+from jaqpot_api_client.models.user import User
 from typing import Optional, Set
 from typing_extensions import Self
 

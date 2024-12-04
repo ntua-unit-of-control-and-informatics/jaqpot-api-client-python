@@ -20,17 +20,17 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr
 from typing import List, Optional
 from typing_extensions import Annotated
-from src.jaqpot_api_client.models.archive_model200_response import ArchiveModel200Response
-from src.jaqpot_api_client.models.dataset import Dataset
-from src.jaqpot_api_client.models.dataset_csv import DatasetCSV
-from src.jaqpot_api_client.models.get_models200_response import GetModels200Response
-from src.jaqpot_api_client.models.model import Model
-from src.jaqpot_api_client.models.partially_update_model_request import PartiallyUpdateModelRequest
-from src.jaqpot_api_client.models.unarchive_model200_response import UnarchiveModel200Response
+from jaqpot_api_client.models.archive_model200_response import ArchiveModel200Response
+from jaqpot_api_client.models.dataset import Dataset
+from jaqpot_api_client.models.dataset_csv import DatasetCSV
+from jaqpot_api_client.models.get_models200_response import GetModels200Response
+from jaqpot_api_client.models.model import Model
+from jaqpot_api_client.models.partially_update_model_request import PartiallyUpdateModelRequest
+from jaqpot_api_client.models.unarchive_model200_response import UnarchiveModel200Response
 
-from src.jaqpot_api_client.api_client import ApiClient, RequestSerialized
-from src.jaqpot_api_client.api_response import ApiResponse
-from src.jaqpot_api_client.rest import RESTResponseType
+from jaqpot_api_client.api_client import ApiClient, RequestSerialized
+from jaqpot_api_client.api_response import ApiResponse
+from jaqpot_api_client.rest import RESTResponseType
 
 
 class ModelApi:

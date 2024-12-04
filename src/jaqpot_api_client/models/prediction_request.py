@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List
-from src.jaqpot_api_client.models.dataset import Dataset
-from src.jaqpot_api_client.models.prediction_model import PredictionModel
+from jaqpot_api_client.models.dataset import Dataset
+from jaqpot_api_client.models.prediction_model import PredictionModel
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
-from src.jaqpot_api_client.models.dataset import Dataset
+from jaqpot_api_client.models.dataset import Dataset
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -27,11 +27,11 @@ from urllib.parse import quote
 from typing import Tuple, Optional, List, Dict, Union
 from pydantic import SecretStr
 
-from src.jaqpot_api_client.configuration import Configuration
-from src.jaqpot_api_client.api_response import ApiResponse, T as ApiResponseT
-import src.jaqpot_api_client.models
-from src.jaqpot_api_client import rest
-from src.jaqpot_api_client.exceptions import (
+from jaqpot_api_client.configuration import Configuration
+from jaqpot_api_client.api_response import ApiResponse, T as ApiResponseT
+import jaqpot_api_client.models
+from jaqpot_api_client import rest
+from jaqpot_api_client.exceptions import (
     ApiValueError,
     ApiException,
     BadRequestException,
@@ -450,7 +450,7 @@ class ApiClient:
             if klass in self.NATIVE_TYPES_MAPPING:
                 klass = self.NATIVE_TYPES_MAPPING[klass]
             else:
-                klass = getattr(src.jaqpot_api_client.models, klass)
+                klass = getattr(jaqpot_api_client.models, klass)
 
         if klass in self.PRIMITIVE_TYPES:
             return self.__deserialize_primitive(data, klass)

@@ -19,12 +19,12 @@ from typing_extensions import Annotated
 
 from pydantic import StrictInt, StrictStr
 from typing import List
-from src.jaqpot_api_client.models.organization import Organization
-from src.jaqpot_api_client.models.partial_update_organization_request import PartialUpdateOrganizationRequest
+from jaqpot_api_client.models.organization import Organization
+from jaqpot_api_client.models.partial_update_organization_request import PartialUpdateOrganizationRequest
 
-from src.jaqpot_api_client.api_client import ApiClient, RequestSerialized
-from src.jaqpot_api_client.api_response import ApiResponse
-from src.jaqpot_api_client.rest import RESTResponseType
+from jaqpot_api_client.api_client import ApiClient, RequestSerialized
+from jaqpot_api_client.api_response import ApiResponse
+from jaqpot_api_client.rest import RESTResponseType
 
 
 class OrganizationApi:

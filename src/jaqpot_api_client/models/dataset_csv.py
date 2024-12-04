@@ -22,7 +22,7 @@ from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from typing_extensions import Annotated
-from src.jaqpot_api_client.models.dataset_type import DatasetType
+from jaqpot_api_client.models.dataset_type import DatasetType
 from typing import Optional, Set
 from typing_extensions import Self
 

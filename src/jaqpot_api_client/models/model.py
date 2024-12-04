@@ -22,17 +22,17 @@ from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from typing_extensions import Annotated
-from src.jaqpot_api_client.models.doa import Doa
-from src.jaqpot_api_client.models.feature import Feature
-from src.jaqpot_api_client.models.library import Library
-from src.jaqpot_api_client.models.model_scores import ModelScores
-from src.jaqpot_api_client.models.model_task import ModelTask
-from src.jaqpot_api_client.models.model_type import ModelType
-from src.jaqpot_api_client.models.model_visibility import ModelVisibility
-from src.jaqpot_api_client.models.organization import Organization
-from src.jaqpot_api_client.models.r_pbpk_config import RPbpkConfig
-from src.jaqpot_api_client.models.transformer import Transformer
-from src.jaqpot_api_client.models.user import User
+from jaqpot_api_client.models.doa import Doa
+from jaqpot_api_client.models.feature import Feature
+from jaqpot_api_client.models.library import Library
+from jaqpot_api_client.models.model_scores import ModelScores
+from jaqpot_api_client.models.model_task import ModelTask
+from jaqpot_api_client.models.model_type import ModelType
+from jaqpot_api_client.models.model_visibility import ModelVisibility
+from jaqpot_api_client.models.organization import Organization
+from jaqpot_api_client.models.r_pbpk_config import RPbpkConfig
+from jaqpot_api_client.models.transformer import Transformer
+from jaqpot_api_client.models.user import User
 from typing import Optional, Set
 from typing_extensions import Self
 

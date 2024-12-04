@@ -22,8 +22,8 @@ from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from src.jaqpot_api_client.models.feature_possible_value import FeaturePossibleValue
-from src.jaqpot_api_client.models.feature_type import FeatureType
+from jaqpot_api_client.models.feature_possible_value import FeaturePossibleValue
+from jaqpot_api_client.models.feature_type import FeatureType
 from typing import Optional, Set
 from typing_extensions import Self
 

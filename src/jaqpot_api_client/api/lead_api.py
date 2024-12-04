@@ -20,11 +20,11 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt
 from typing import List
 from typing_extensions import Annotated
-from src.jaqpot_api_client.models.lead import Lead
+from jaqpot_api_client.models.lead import Lead
 
-from src.jaqpot_api_client.api_client import ApiClient, RequestSerialized
-from src.jaqpot_api_client.api_response import ApiResponse
-from src.jaqpot_api_client.rest import RESTResponseType
+from jaqpot_api_client.api_client import ApiClient, RequestSerialized
+from jaqpot_api_client.api_response import ApiResponse
+from jaqpot_api_client.rest import RESTResponseType
 
 
 class LeadApi:
