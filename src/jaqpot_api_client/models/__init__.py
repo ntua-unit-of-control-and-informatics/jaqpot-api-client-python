@@ -27,6 +27,7 @@ from jaqpot_api_client.models.dataset_csv import DatasetCSV
 from jaqpot_api_client.models.dataset_type import DatasetType
 from jaqpot_api_client.models.doa import Doa
 from jaqpot_api_client.models.doa_method import DoaMethod
+from jaqpot_api_client.models.docker_config import DockerConfig
 from jaqpot_api_client.models.error_code import ErrorCode
 from jaqpot_api_client.models.error_response import ErrorResponse
 from jaqpot_api_client.models.feature import Feature
