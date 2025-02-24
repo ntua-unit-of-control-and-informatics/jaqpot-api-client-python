@@ -45,7 +45,7 @@ class Model(BaseModel):
     name: Annotated[str, Field(min_length=3, strict=True, max_length=255)]
     description: Optional[Annotated[str, Field(min_length=3, strict=True, max_length=50000)]] = None
     type: ModelType
-    jaqpotpy_version: StrictStr = Field(alias="jaqpotpyVersion")
+    jaqpotpy_version: Optional[StrictStr] = Field(default=None, alias="jaqpotpyVersion")
     doas: Optional[Annotated[List[Doa], Field(max_length=50)]] = None
     libraries: Annotated[List[Library], Field(max_length=1000)]
     dependent_features: Annotated[List[Feature], Field(max_length=1000)] = Field(alias="dependentFeatures")

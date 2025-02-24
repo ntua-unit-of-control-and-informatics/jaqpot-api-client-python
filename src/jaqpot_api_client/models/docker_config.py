@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
 from typing import Optional, Set
@@ -30,7 +30,8 @@ class DockerConfig(BaseModel):
     """ # noqa: E501
     app_name: Annotated[str, Field(strict=True, max_length=63)] = Field(description="Unique identifier used for internal service discovery", alias="appName")
     docker_image: Optional[Annotated[str, Field(strict=True, max_length=255)]] = Field(default=None, description="Reference to the Docker image (for admin documentation)", alias="dockerImage")
-    __properties: ClassVar[List[str]] = ["appName", "dockerImage"]
+    llm_model_id: Optional[StrictStr] = Field(default=None, description="The ID of the LLM model", alias="llmModelId")
+    __properties: ClassVar[List[str]] = ["appName", "dockerImage", "llmModelId"]
 
     @field_validator('app_name')
     def app_name_validate_regular_expression(cls, value):
@@ -91,7 +92,8 @@ class DockerConfig(BaseModel):
 
         _obj = cls.model_validate({
             "appName": obj.get("appName"),
-            "dockerImage": obj.get("dockerImage")
+            "dockerImage": obj.get("dockerImage"),
+            "llmModelId": obj.get("llmModelId")
         })
         return _obj
 
