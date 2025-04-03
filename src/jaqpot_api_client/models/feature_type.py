@@ -36,6 +36,7 @@ class FeatureType(str, Enum):
     BOOLEAN = 'BOOLEAN'
     FLOAT_ARRAY = 'FLOAT_ARRAY'
     STRING_ARRAY = 'STRING_ARRAY'
+    IMAGE = 'IMAGE'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
