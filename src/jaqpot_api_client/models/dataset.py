@@ -22,6 +22,7 @@ from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
+from jaqpot_api_client.models.dataset_result_type import DatasetResultType
 from jaqpot_api_client.models.dataset_type import DatasetType
 from typing import Optional, Set
 from typing_extensions import Self
@@ -36,6 +37,7 @@ class Dataset(BaseModel):
     entry_type: StrictStr = Field(alias="entryType")
     input: Annotated[List[Any], Field(max_length=100)]
     result: Optional[List[Any]] = None
+    result_types: Optional[Dict[str, DatasetResultType]] = Field(default=None, alias="resultTypes")
     status: Optional[StrictStr] = None
     failure_reason: Optional[StrictStr] = Field(default=None, alias="failureReason")
     user_id: Optional[StrictStr] = Field(default=None, alias="userId")
@@ -45,7 +47,7 @@ class Dataset(BaseModel):
     execution_finished_at: Optional[datetime] = Field(default=None, alias="executionFinishedAt")
     created_at: Optional[datetime] = Field(default=None, alias="createdAt")
     updated_at: Optional[datetime] = Field(default=None, alias="updatedAt")
-    __properties: ClassVar[List[str]] = ["id", "name", "type", "entryType", "input", "result", "status", "failureReason", "userId", "modelId", "modelName", "executedAt", "executionFinishedAt", "createdAt", "updatedAt"]
+    __properties: ClassVar[List[str]] = ["id", "name", "type", "entryType", "input", "result", "resultTypes", "status", "failureReason", "userId", "modelId", "modelName", "executedAt", "executionFinishedAt", "createdAt", "updatedAt"]
 
     @field_validator('entry_type')
     def entry_type_validate_enum(cls, value):
@@ -121,6 +123,7 @@ class Dataset(BaseModel):
             "entryType": obj.get("entryType"),
             "input": obj.get("input"),
             "result": obj.get("result"),
+            "resultTypes": dict((_k, _v) for _k, _v in obj.get("resultTypes").items()),
             "status": obj.get("status"),
             "failureReason": obj.get("failureReason"),
             "userId": obj.get("userId"),

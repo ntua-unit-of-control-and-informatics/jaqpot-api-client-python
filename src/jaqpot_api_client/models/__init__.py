@@ -24,6 +24,7 @@ from jaqpot_api_client.models.create_api_key201_response import CreateApiKey201R
 from jaqpot_api_client.models.create_invitations_request import CreateInvitationsRequest
 from jaqpot_api_client.models.dataset import Dataset
 from jaqpot_api_client.models.dataset_csv import DatasetCSV
+from jaqpot_api_client.models.dataset_result_type import DatasetResultType
 from jaqpot_api_client.models.dataset_type import DatasetType
 from jaqpot_api_client.models.doa import Doa
 from jaqpot_api_client.models.doa_method import DoaMethod
