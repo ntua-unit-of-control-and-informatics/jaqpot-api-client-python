@@ -58,8 +58,8 @@ class Model(BaseModel):
     torch_config: Optional[Dict[str, Any]] = Field(default=None, alias="torchConfig")
     preprocessors: Optional[Annotated[List[Transformer], Field(max_length=50)]] = None
     featurizers: Optional[Annotated[List[Transformer], Field(max_length=50)]] = None
-    raw_preprocessor: Optional[Union[Annotated[bytes, Field(strict=True, max_length=10000000)], Annotated[str, Field(strict=True, max_length=10000000)]]] = Field(default=None, description="A base64 representation of the raw preprocessor.", alias="rawPreprocessor")
-    raw_model: Union[Annotated[bytes, Field(strict=True, max_length=100000000)], Annotated[str, Field(strict=True, max_length=100000000)]] = Field(description="A base64 representation of the raw model.", alias="rawModel")
+    raw_preprocessor: Optional[Union[Annotated[bytes, Field(strict=True, max_length=133000000)], Annotated[str, Field(strict=True, max_length=133000000)]]] = Field(default=None, description="A base64 representation of the raw preprocessor.", alias="rawPreprocessor")
+    raw_model: Union[Annotated[bytes, Field(strict=True, max_length=133000000)], Annotated[str, Field(strict=True, max_length=133000000)]] = Field(description="A base64 representation of the raw model.", alias="rawModel")
     creator: Optional[User] = None
     can_edit: Optional[StrictBool] = Field(default=None, description="If the current user can edit the model", alias="canEdit")
     is_admin: Optional[StrictBool] = Field(default=None, alias="isAdmin")
