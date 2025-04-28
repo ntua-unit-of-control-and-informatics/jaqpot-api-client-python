@@ -22,7 +22,6 @@ from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from jaqpot_api_client.models.dataset_result_type import DatasetResultType
 from jaqpot_api_client.models.dataset_type import DatasetType
 from typing import Optional, Set
 from typing_extensions import Self
@@ -37,7 +36,7 @@ class Dataset(BaseModel):
     entry_type: StrictStr = Field(alias="entryType")
     input: Annotated[List[Any], Field(max_length=100)]
     result: Optional[List[Any]] = None
-    result_types: Optional[Dict[str, DatasetResultType]] = Field(default=None, alias="resultTypes")
+    result_types: Optional[Dict[str, Any]] = Field(default=None, alias="resultTypes")
     status: Optional[StrictStr] = None
     failure_reason: Optional[StrictStr] = Field(default=None, alias="failureReason")
     user_id: Optional[StrictStr] = Field(default=None, alias="userId")
@@ -105,6 +104,11 @@ class Dataset(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # set to None if result_types (nullable) is None
+        # and model_fields_set contains the field
+        if self.result_types is None and "result_types" in self.model_fields_set:
+            _dict['resultTypes'] = None
+
         return _dict
 
     @classmethod
@@ -123,7 +127,7 @@ class Dataset(BaseModel):
             "entryType": obj.get("entryType"),
             "input": obj.get("input"),
             "result": obj.get("result"),
-            "resultTypes": dict((_k, _v) for _k, _v in obj.get("resultTypes").items()),
+            "resultTypes": obj.get("resultTypes"),
             "status": obj.get("status"),
             "failureReason": obj.get("failureReason"),
             "userId": obj.get("userId"),
