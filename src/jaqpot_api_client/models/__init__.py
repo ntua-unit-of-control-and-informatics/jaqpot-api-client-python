@@ -22,6 +22,7 @@ from jaqpot_api_client.models.bounding_box_doa import BoundingBoxDoa
 from jaqpot_api_client.models.city_block_doa import CityBlockDoa
 from jaqpot_api_client.models.create_api_key201_response import CreateApiKey201Response
 from jaqpot_api_client.models.create_invitations_request import CreateInvitationsRequest
+from jaqpot_api_client.models.create_large_model201_response import CreateLargeModel201Response
 from jaqpot_api_client.models.dataset import Dataset
 from jaqpot_api_client.models.dataset_csv import DatasetCSV
 from jaqpot_api_client.models.dataset_result_type import DatasetResultType

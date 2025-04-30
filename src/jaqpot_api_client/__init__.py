@@ -23,6 +23,7 @@ from jaqpot_api_client.api.api_keys_api import ApiKeysApi
 from jaqpot_api_client.api.auth_api import AuthApi
 from jaqpot_api_client.api.dataset_api import DatasetApi
 from jaqpot_api_client.api.feature_api import FeatureApi
+from jaqpot_api_client.api.large_model_api import LargeModelApi
 from jaqpot_api_client.api.lead_api import LeadApi
 from jaqpot_api_client.api.model_api import ModelApi
 from jaqpot_api_client.api.organization_api import OrganizationApi
@@ -49,6 +50,7 @@ from jaqpot_api_client.models.bounding_box_doa import BoundingBoxDoa
 from jaqpot_api_client.models.city_block_doa import CityBlockDoa
 from jaqpot_api_client.models.create_api_key201_response import CreateApiKey201Response
 from jaqpot_api_client.models.create_invitations_request import CreateInvitationsRequest
+from jaqpot_api_client.models.create_large_model201_response import CreateLargeModel201Response
 from jaqpot_api_client.models.dataset import Dataset
 from jaqpot_api_client.models.dataset_csv import DatasetCSV
 from jaqpot_api_client.models.dataset_result_type import DatasetResultType
