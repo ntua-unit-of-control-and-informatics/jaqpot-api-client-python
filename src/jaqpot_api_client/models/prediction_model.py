@@ -36,7 +36,7 @@ class PredictionModel(BaseModel):
     dependent_features: List[Feature] = Field(description="List of dependent features for the model", alias="dependentFeatures")
     independent_features: List[Feature] = Field(description="List of independent features for the model", alias="independentFeatures")
     type: ModelType
-    raw_model: StrictStr = Field(description="Raw model data in serialized format", alias="rawModel")
+    raw_model: Optional[StrictStr] = Field(default=None, description="Raw model data in serialized format", alias="rawModel")
     raw_preprocessor: Optional[StrictStr] = Field(default=None, description="Raw preprocessor data in serialized format", alias="rawPreprocessor")
     doas: Optional[List[PredictionDoa]] = Field(default=None, description="List of Domain of Applicability (DoA) configurations")
     selected_features: Optional[List[StrictStr]] = Field(default=None, description="List of feature names selected for the model", alias="selectedFeatures")
