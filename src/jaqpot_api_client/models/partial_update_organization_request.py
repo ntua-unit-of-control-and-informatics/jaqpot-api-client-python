@@ -20,6 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from typing_extensions import Annotated
 from jaqpot_api_client.models.organization_visibility import OrganizationVisibility
 from typing import Optional, Set
 from typing_extensions import Self
@@ -29,7 +30,7 @@ class PartialUpdateOrganizationRequest(BaseModel):
     PartialUpdateOrganizationRequest
     """ # noqa: E501
     name: StrictStr
-    description: Optional[StrictStr] = None
+    description: Optional[Annotated[str, Field(min_length=3, strict=True, max_length=50000)]] = None
     contact_email: StrictStr = Field(alias="contactEmail")
     visibility: OrganizationVisibility
     __properties: ClassVar[List[str]] = ["name", "description", "contactEmail", "visibility"]

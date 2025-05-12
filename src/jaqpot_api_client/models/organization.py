@@ -36,7 +36,7 @@ class Organization(BaseModel):
     name: Annotated[str, Field(min_length=3, strict=True, max_length=200)]
     creator: Optional[User] = None
     visibility: OrganizationVisibility
-    description: Optional[Annotated[str, Field(min_length=3, strict=True, max_length=2000)]] = None
+    description: Optional[Annotated[str, Field(min_length=3, strict=True, max_length=50000)]] = None
     organization_members: Optional[List[OrganizationUser]] = Field(default=None, alias="organizationMembers")
     contact_email: StrictStr = Field(alias="contactEmail")
     contact_phone: Optional[StrictStr] = Field(default=None, alias="contactPhone")
