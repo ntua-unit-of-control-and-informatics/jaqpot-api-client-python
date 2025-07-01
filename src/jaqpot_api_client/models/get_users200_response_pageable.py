@@ -18,26 +18,23 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
+from jaqpot_api_client.models.get_users200_response_pageable_sort import GetUsers200ResponsePageableSort
 from typing import Optional, Set
 from typing_extensions import Self
 
-class User(BaseModel):
+class GetUsers200ResponsePageable(BaseModel):
     """
-    User
+    GetUsers200ResponsePageable
     """ # noqa: E501
-    id: StrictStr
-    username: Optional[StrictStr] = None
-    first_name: Optional[StrictStr] = Field(default=None, alias="firstName")
-    last_name: Optional[StrictStr] = Field(default=None, alias="lastName")
-    email: Optional[StrictStr] = None
-    email_verified: Optional[StrictBool] = Field(default=None, alias="emailVerified")
-    avatar_url: Optional[StrictStr] = Field(default=None, alias="avatarUrl")
-    can_edit: Optional[StrictBool] = Field(default=None, alias="canEdit")
-    created_at: Optional[datetime] = Field(default=None, description="User signup date", alias="createdAt")
-    __properties: ClassVar[List[str]] = ["id", "username", "firstName", "lastName", "email", "emailVerified", "avatarUrl", "canEdit", "createdAt"]
+    sort: Optional[GetUsers200ResponsePageableSort] = None
+    offset: Optional[StrictInt] = None
+    page_size: Optional[StrictInt] = Field(default=None, alias="pageSize")
+    page_number: Optional[StrictInt] = Field(default=None, alias="pageNumber")
+    unpaged: Optional[StrictBool] = None
+    paged: Optional[StrictBool] = None
+    __properties: ClassVar[List[str]] = ["sort", "offset", "pageSize", "pageNumber", "unpaged", "paged"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -57,7 +54,7 @@ class User(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of User from a JSON string"""
+        """Create an instance of GetUsers200ResponsePageable from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -69,10 +66,8 @@ class User(BaseModel):
         * `None` is only added to the output dict for nullable fields that
           were set at model initialization. Other fields with value `None`
           are ignored.
-        * OpenAPI `readOnly` fields are excluded.
         """
         excluded_fields: Set[str] = set([
-            "created_at",
         ])
 
         _dict = self.model_dump(
@@ -80,11 +75,14 @@ class User(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of sort
+        if self.sort:
+            _dict['sort'] = self.sort.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of User from a dict"""
+        """Create an instance of GetUsers200ResponsePageable from a dict"""
         if obj is None:
             return None
 
@@ -92,15 +90,12 @@ class User(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "id": obj.get("id"),
-            "username": obj.get("username"),
-            "firstName": obj.get("firstName"),
-            "lastName": obj.get("lastName"),
-            "email": obj.get("email"),
-            "emailVerified": obj.get("emailVerified"),
-            "avatarUrl": obj.get("avatarUrl"),
-            "canEdit": obj.get("canEdit"),
-            "createdAt": obj.get("createdAt")
+            "sort": GetUsers200ResponsePageableSort.from_dict(obj["sort"]) if obj.get("sort") is not None else None,
+            "offset": obj.get("offset"),
+            "pageSize": obj.get("pageSize"),
+            "pageNumber": obj.get("pageNumber"),
+            "unpaged": obj.get("unpaged"),
+            "paged": obj.get("paged")
         })
         return _obj
 

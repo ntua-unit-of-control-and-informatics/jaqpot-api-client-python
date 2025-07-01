@@ -18,26 +18,19 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class User(BaseModel):
+class GetUsers200ResponsePageableSort(BaseModel):
     """
-    User
+    GetUsers200ResponsePageableSort
     """ # noqa: E501
-    id: StrictStr
-    username: Optional[StrictStr] = None
-    first_name: Optional[StrictStr] = Field(default=None, alias="firstName")
-    last_name: Optional[StrictStr] = Field(default=None, alias="lastName")
-    email: Optional[StrictStr] = None
-    email_verified: Optional[StrictBool] = Field(default=None, alias="emailVerified")
-    avatar_url: Optional[StrictStr] = Field(default=None, alias="avatarUrl")
-    can_edit: Optional[StrictBool] = Field(default=None, alias="canEdit")
-    created_at: Optional[datetime] = Field(default=None, description="User signup date", alias="createdAt")
-    __properties: ClassVar[List[str]] = ["id", "username", "firstName", "lastName", "email", "emailVerified", "avatarUrl", "canEdit", "createdAt"]
+    empty: Optional[StrictBool] = None
+    sorted: Optional[StrictBool] = None
+    unsorted: Optional[StrictBool] = None
+    __properties: ClassVar[List[str]] = ["empty", "sorted", "unsorted"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -57,7 +50,7 @@ class User(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of User from a JSON string"""
+        """Create an instance of GetUsers200ResponsePageableSort from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -69,10 +62,8 @@ class User(BaseModel):
         * `None` is only added to the output dict for nullable fields that
           were set at model initialization. Other fields with value `None`
           are ignored.
-        * OpenAPI `readOnly` fields are excluded.
         """
         excluded_fields: Set[str] = set([
-            "created_at",
         ])
 
         _dict = self.model_dump(
@@ -84,7 +75,7 @@ class User(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of User from a dict"""
+        """Create an instance of GetUsers200ResponsePageableSort from a dict"""
         if obj is None:
             return None
 
@@ -92,15 +83,9 @@ class User(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "id": obj.get("id"),
-            "username": obj.get("username"),
-            "firstName": obj.get("firstName"),
-            "lastName": obj.get("lastName"),
-            "email": obj.get("email"),
-            "emailVerified": obj.get("emailVerified"),
-            "avatarUrl": obj.get("avatarUrl"),
-            "canEdit": obj.get("canEdit"),
-            "createdAt": obj.get("createdAt")
+            "empty": obj.get("empty"),
+            "sorted": obj.get("sorted"),
+            "unsorted": obj.get("unsorted")
         })
         return _obj
 

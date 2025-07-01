@@ -19,6 +19,7 @@ __version__ = "1.0.0"
 
 # import apis into sdk package
 from jaqpot_api_client.api.user_settings_api import UserSettingsApi
+from jaqpot_api_client.api.admin_api import AdminApi
 from jaqpot_api_client.api.api_keys_api import ApiKeysApi
 from jaqpot_api_client.api.auth_api import AuthApi
 from jaqpot_api_client.api.dataset_api import DatasetApi
@@ -26,6 +27,7 @@ from jaqpot_api_client.api.feature_api import FeatureApi
 from jaqpot_api_client.api.large_model_api import LargeModelApi
 from jaqpot_api_client.api.lead_api import LeadApi
 from jaqpot_api_client.api.model_api import ModelApi
+from jaqpot_api_client.api.model_download_api import ModelDownloadApi
 from jaqpot_api_client.api.organization_api import OrganizationApi
 from jaqpot_api_client.api.organization_invitation_api import OrganizationInvitationApi
 from jaqpot_api_client.api.user_api import UserApi
@@ -64,8 +66,14 @@ from jaqpot_api_client.models.feature import Feature
 from jaqpot_api_client.models.feature_possible_value import FeaturePossibleValue
 from jaqpot_api_client.models.feature_type import FeatureType
 from jaqpot_api_client.models.get_all_api_keys_for_user200_response_inner import GetAllApiKeysForUser200ResponseInner
+from jaqpot_api_client.models.get_all_models200_response import GetAllModels200Response
 from jaqpot_api_client.models.get_datasets200_response import GetDatasets200Response
+from jaqpot_api_client.models.get_model_download_url200_response import GetModelDownloadUrl200Response
+from jaqpot_api_client.models.get_model_preprocessor_download_url200_response import GetModelPreprocessorDownloadUrl200Response
 from jaqpot_api_client.models.get_models200_response import GetModels200Response
+from jaqpot_api_client.models.get_users200_response import GetUsers200Response
+from jaqpot_api_client.models.get_users200_response_pageable import GetUsers200ResponsePageable
+from jaqpot_api_client.models.get_users200_response_pageable_sort import GetUsers200ResponsePageableSort
 from jaqpot_api_client.models.kernel_based_doa import KernelBasedDoa
 from jaqpot_api_client.models.lead import Lead
 from jaqpot_api_client.models.leverage_doa import LeverageDoa
