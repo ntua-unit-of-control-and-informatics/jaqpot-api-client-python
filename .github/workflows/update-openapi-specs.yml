@@ -39,7 +39,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m "chore: update openapi specs
+          git commit -m "chore: update openapi specs" 
           git push
 
       - name: No changes detected
