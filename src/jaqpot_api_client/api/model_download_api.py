@@ -44,7 +44,7 @@ class ModelDownloadApi:
     def get_model_download_urls(
         self,
         model_id: Annotated[StrictInt, Field(description="The ID of the model to get download URLs for")],
-        expiration_minutes: Annotated[Optional[Annotated[int, Field(le=60, strict=True, ge=1)]], Field(description="URL expiration time in minutes (default 10, max 60)")] = None,
+        expiration_minutes: Annotated[Optional[Annotated[int, Field(le=20, strict=True, ge=1)]], Field(description="URL expiration time in minutes (default 10, max 20)")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -64,7 +64,7 @@ class ModelDownloadApi:
 
         :param model_id: The ID of the model to get download URLs for (required)
         :type model_id: int
-        :param expiration_minutes: URL expiration time in minutes (default 10, max 60)
+        :param expiration_minutes: URL expiration time in minutes (default 10, max 20)
         :type expiration_minutes: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -117,7 +117,7 @@ class ModelDownloadApi:
     def get_model_download_urls_with_http_info(
         self,
         model_id: Annotated[StrictInt, Field(description="The ID of the model to get download URLs for")],
-        expiration_minutes: Annotated[Optional[Annotated[int, Field(le=60, strict=True, ge=1)]], Field(description="URL expiration time in minutes (default 10, max 60)")] = None,
+        expiration_minutes: Annotated[Optional[Annotated[int, Field(le=20, strict=True, ge=1)]], Field(description="URL expiration time in minutes (default 10, max 20)")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -137,7 +137,7 @@ class ModelDownloadApi:
 
         :param model_id: The ID of the model to get download URLs for (required)
         :type model_id: int
-        :param expiration_minutes: URL expiration time in minutes (default 10, max 60)
+        :param expiration_minutes: URL expiration time in minutes (default 10, max 20)
         :type expiration_minutes: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -190,7 +190,7 @@ class ModelDownloadApi:
     def get_model_download_urls_without_preload_content(
         self,
         model_id: Annotated[StrictInt, Field(description="The ID of the model to get download URLs for")],
-        expiration_minutes: Annotated[Optional[Annotated[int, Field(le=60, strict=True, ge=1)]], Field(description="URL expiration time in minutes (default 10, max 60)")] = None,
+        expiration_minutes: Annotated[Optional[Annotated[int, Field(le=20, strict=True, ge=1)]], Field(description="URL expiration time in minutes (default 10, max 20)")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -210,7 +210,7 @@ class ModelDownloadApi:
 
         :param model_id: The ID of the model to get download URLs for (required)
         :type model_id: int
-        :param expiration_minutes: URL expiration time in minutes (default 10, max 60)
+        :param expiration_minutes: URL expiration time in minutes (default 10, max 20)
         :type expiration_minutes: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
